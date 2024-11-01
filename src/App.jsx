@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -10,6 +10,8 @@ function App() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
+  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,7 +27,7 @@ function App() {
             
             {/* Desktop menu */}
             <nav className="hidden md:flex space-x-14">
-              <a href="#hero" className="hover:text-red-400">About</a>
+              <a href="#hero" className="hover:text-red-400">Home</a>
               <a href="#about" className="hover:text-red-400">About</a>
               <a href="#projects" className="hover:text-red-400">Projects</a>
               <a href="#skill" className="hover:text-red-400">Skill</a>
@@ -110,16 +112,16 @@ function App() {
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold mb-6 text-center">Projects</h2>
             <div className="overflow-x-auto scrollbar-hide">
-              <div className="flex space-x-8 min-w-max">
+              <div className="flex space-x-5 min-w-max">
                 {/* Project 1 */}
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800">
                   <img src="src/assets/visualvibe.png" alt="" />
                   <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Visual Vibe</div>
                     <p class=" text-base">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-                      exercitationem praesentium nihil.
+                    In this project, I serve as a frontend developer, 
+                    creating several sections of the website for storing 
+                    and displaying images that have been successfully used.
                     </p>
                   </div>
                 </div>
@@ -129,9 +131,10 @@ function App() {
                   <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Bank Sampah</div>
                     <p class=" text-base">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-                      exercitationem praesentium nihil.
+                    In this project, I play the role of a fullstack developer in the 
+                    development of the Bank Sampah website, specifically focusing on 
+                    the dashboard. This website has been utilized by the village of
+                    Banjarangkan in Klungkung, Bali, for recording and managing bank Sampah activities.
                     </p>
                   </div>
                 </div>
@@ -141,9 +144,10 @@ function App() {
                   <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Toeic Assesment</div>
                     <p class=" text-base">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-                      exercitationem praesentium nihil.
+                    In this project, I am a fullstack developer working on the TOEIC 
+                    Assessment website, particularly on the dashboard for adding questions, 
+                    assets, and the evaluation page. This website is planned to be used by 
+                    the Language Unit at the State Polytechnic of Bali.
                     </p>
                   </div>
                 </div>
@@ -153,9 +157,9 @@ function App() {
                   <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Game 3D Modeller</div>
                     <p class=" text-base">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-                      exercitationem praesentium nihil.
+                    I also take freelance jobs in creating 3D vehicle assets for various 
+                    games, such as GTA 5, Assetto Corsa, ETS 2, and GTA SA, ensuring that
+                    they meet the specifications required by each game.
                     </p>
                   </div>
                 </div>
@@ -254,20 +258,36 @@ function App() {
             </div>
           </section>
 
-
-
         {/* Contact Section */}
-        <section id="contact" className="contacts py-20 w-full">
-          <div className="max-w-7xl mx-auto px-4 text-center">
+        <section id="contact" className="contacts py-20 w-full ">
+          <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">Contact</h2>
-            <p className="text-gray-400 mb-6">
-              Feel free to reach out if you'd like to work together!
+            <p className="text-gray-100 mb-8">
+              Feel free to reach out if you'd like to work together or just say hello!
             </p>
-            <button className="bg-teal-500 px-6 py-2 rounded text-white hover:bg-teal-600">
-              Send Message
-            </button>
+            
+            {/* Contact Form */}
+            <form className="mb-8 space-y-4">
+              <div className="flex flex-col  md:flex-row md:space-x-4">
+                <input type="text" placeholder="Your Name" className="w-full px-4 py-2 border rounded focus:outline-none focus:border-white text-gray-800" required />
+                
+              </div>
+              <div className="flex flex-col  md:flex-row md:space-x-4">
+                <input type="email" placeholder="Your Email" className="w-full px-4 py-2 border rounded focus:outline-none focus:border-white text-gray-800 " required />
+              </div>
+              <input type="text" placeholder="Subject" className="w-full px-4 py-2 border rounded focus:outline-none focus:border-white text-gray-800" />
+              <textarea placeholder="Your Message" className="w-full px-4 py-2 border rounded focus:outline-none focus:border-white text-gray-800" rows="5" required></textarea>
+              <a href="mailto:gedeangga424@gmail.com" className="hover:underline">
+                <button  type="button" className="contactb px-6 py-2 rounded  text-white hover:bg-red-600">
+                  Send Message
+                </button>
+              </a>
+            </form>
+            
+            
           </div>
         </section>
+
 
         {/* Footer */}
           <footer className="footer py-8  text-center w-full">
@@ -281,7 +301,7 @@ function App() {
                 <a href="https://www.instagram.com/gdangga._?igsh=c2I0azc2aGM2aWpj" target="_blank" rel="noopener noreferrer">
                   <img src="src\assets\instagram.svg" alt="Instagram" className="h-6 w-6" />
                 </a>
-                <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/gdangga" target="_blank" rel="noopener noreferrer">
                   <img src="src\assets\github.svg" alt="GitHub" className="h-6 w-6" />
                 </a>
               </div>
@@ -306,7 +326,7 @@ function App() {
               
               {/* Copyright */}
               <p className="text-white">
-                &copy; 2024 Anggs. All rights reserved.
+                &copy; 2024 Gdangga. All rights reserved.
               </p>
 
             </div>
