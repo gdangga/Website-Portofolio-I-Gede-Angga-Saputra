@@ -3,15 +3,17 @@
 @tailwind utilities;
 
 
-
+.bgs{
+  background-color: rgb(8, 32, 50);
+}
 .as{
-    width: 50%;
-    height: 50%;
-    border-radius: 15px;
+    width: 70%;
+    bottom: 0%;
 }
 
-.contact{
-    margin-top: 2%;
+.contactb{
+    margin-top: 3%;
+    background-color: rgb(255, 76, 41);
 }
 /* Custom class to hide scrollbar */
 .scrollbar-hide::-webkit-scrollbar {
@@ -22,5 +24,40 @@
     scrollbar-width: none; /* Firefox */
   }
 
+.webtext{
+  margin-bottom: 10px;
+  color: rgb(117, 117, 117);
+}
 
-  
+.hero{
+  margin-top: 50px;
+  background-color: rgb(8, 32, 50);
+}
+
+.navbar{
+  background-color: rgb(44, 57, 75);
+}
+
+.about{
+  background-color: rgb(44, 57, 75);
+}
+
+.projects{
+  background-color: rgb(8, 32, 50);
+}
+
+.kanan{
+  bottom: -20px;
+}
+
+.skill{
+  background-color: rgb(44, 57, 75);
+}
+
+.contact{
+  background-color: rgb(8, 32, 50);
+}
+
+.footer{
+  background-color: rgb(44, 57, 75);
+}
